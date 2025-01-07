@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeswin-Portfolio Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(69, 31, 105);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 85px;
+        background-color: rgb(50, 18, 80);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      .left {
+        font-size: 1.7rem;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-around;
+        margin: 80px 0;
+      }
+      .firstsection > div {
+        width: 30%;
+      }
+      .leftsection {
+        font-size: 3rem;
+        margin: 70px 0;
+      }
+      .purple {
+        color: blueviolet;
+      }
+      .footer {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        margin-top: auto;
+      }
+      .form {
+        background-color: #15172b;
+        border-radius: 20px;
+        box-sizing: border-box;
+        height: 500px;
+        padding: 20px;
+        width: 320px;
+      }
+
+      .title {
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: 30px;
+      }
+
+      .subtitle {
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      .input-container {
+        height: 50px;
+        position: relative;
+        width: 100%;
+      }
+
+      .ic1 {
+        margin-top: 40px;
+      }
+
+      .ic2 {
+        margin-top: 30px;
+      }
+
+      .input {
+        background-color: #303245;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        font-size: 18px;
+        height: 100%;
+        outline: 0;
+        padding: 4px 20px 0;
+        width: 100%;
+      }
+
+      .cut {
+        background-color: #15172b;
+        border-radius: 10px;
+        height: 20px;
+        left: 20px;
+        position: absolute;
+        top: -20px;
+        transform: translateY(0);
+        transition: transform 200ms;
+        width: 76px;
+      }
+
+      .cut-short {
+        width: 50px;
+      }
+
+      .input:focus ~ .cut,
+      .input:not(:placeholder-shown) ~ .cut {
+        transform: translateY(8px);
+      }
+
+      .placeholder {
+        color: #65657b;
+        font-family: sans-serif;
+        left: 20px;
+        line-height: 14px;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 50%;
+        transition: transform 200ms, color 200ms;
+        top: 20px;
+      }
+
+      .input:focus ~ .placeholder,
+      .input:not(:placeholder-shown) ~ .placeholder {
+        transform: translateY(-30px) translateX(10px) scale(0.75);
+      }
+
+      .input:not(:placeholder-shown) ~ .placeholder {
+        color: #808097;
+      }
+
+      .input:focus ~ .placeholder {
+        color: #dc2f55;
+      }
+
+      .submit {
+        background-color: #08d;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        cursor: pointer;
+        font-size: 18px;
+        height: 50px;
+        margin-top: 38px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .submit:active {
+        background-color: #06b;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Jeswin's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html" style="color: white">Home</a></li>
+            <li><a href="about.html" style="color: white">About</a></li>
+            <li><a href="projects.html" style="color: white">Projects</a></li>
+            <li><a href="resume.html" style="color: white">Resume</a></li>
+            <li><a href="contact.html" style="color: white">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <form action="contact.html">
+        <div class="form" style="margin-left: 42%; margin-top: 9%">
+          <div class="title">Contact Me</div>
+          <div class="input-container ic1">
+            <input id="firstname" class="input" type="text" required />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder"> Name</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="email" class="input" type="email" required />
+            <div class="cut"></div>
+            <label for="email" class="placeholder">Email</label>
+          </div>
+          <div class="input-container ic2">
+            <textarea
+              id="message"
+              class="input"
+              type="text"
+              rows="4"
+            ></textarea>
+            <div class="cut cut-short"></div>
+            <label for="message" class="placeholder">Message</label>
+          </div>
+          <button type="submit" class="submit">Send</button>
+        </div>
+      </form>
+    </main>
+    <footer
+      style="
+        background-color: rgb(69, 31, 105);
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+      "
+    >
+      <div>&copy; 2025 Jeswin. All Rights Reserved.</div>
+      <div style="display: flex; justify-content: center; gap: 15px">
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          style="color: #fff; text-decoration: none; font-size: 16px"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn"
+            style="width: 20px; height: 20px"
+          />
+        </a>
+        <a
+          href="https://github.com/jeswin1409/my-portfolio"
+          target="_blank"
+          style="color: #fff; text-decoration: none; font-size: 16px"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            alt="GitHub"
+            style="width: 20px; height: 20px"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
